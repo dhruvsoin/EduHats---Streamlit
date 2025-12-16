@@ -72,11 +72,33 @@
 
 ### Running the Application
 
+**Option 1: Web Interface (Recommended for Interactive Use)**
+
 ```bash
 streamlit run app.py
 ```
 
 The application will open in your default browser at `http://localhost:8501`
+
+**Option 2: Command Line Interface (For Automation/Scripting)**
+
+```bash
+# Run full pipeline
+python main.py --job-title "Software Engineer" --location "Remote" --max-jobs 10
+
+# Use existing scraped data
+python main.py --skip-scraping --syllabus-file "current_syllabus.json"
+
+# See all options
+python main.py --help
+```
+
+**CLI Options:**
+- `--job-title` - Job title to search for (default: "Software Engineer")
+- `--location` - Location to search in (default: empty)
+- `--max-jobs` - Maximum jobs to scrape (default: 10)
+- `--skip-scraping` - Use existing jobs.json
+- `--syllabus-file` - Path to syllabus JSON (default: "current_syllabus.json")
 
 ---
 
@@ -117,7 +139,8 @@ The application will open in your default browser at `http://localhost:8501`
 
 ```
 EduHats/
-├── app.py                    # Main Streamlit application
+├── app.py                    # Streamlit web interface (GUI)
+├── main.py                   # Command-line interface (CLI)
 ├── jobspy_scraper.py         # Job scraping module
 ├── skills_extractor.py       # AI-powered skill extraction
 ├── syllabus_matcher.py       # Gap analysis and syllabus matching
@@ -126,6 +149,7 @@ EduHats/
 ├── requirement.txt          # Python dependencies
 ├── .env                     # Environment variables (not in git)
 ├── .gitignore              # Git ignore rules
+├── LICENSE                 # MIT License
 └── README.md               # This file
 ```
 
