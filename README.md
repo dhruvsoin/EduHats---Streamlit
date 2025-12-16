@@ -175,19 +175,6 @@ EduHats/
 
 ---
 
-## 🔑 API Keys
-
-This application requires a **Groq API key** for AI-powered skill extraction and analysis.
-
-1. Sign up at [Groq Console](https://console.groq.com)
-2. Generate an API key
-3. Add to `.env` file:
-   ```env
-   GROQ_API_KEY=your_key_here
-   ```
-
----
-
 ## 📝 Configuration
 
 ### Job Scraping Settings
@@ -197,8 +184,6 @@ This application requires a **Groq API key** for AI-powered skill extraction and
 
 ### AI Model Settings
 - **Model**: Llama 3.1 70B (via Groq)
-- **Temperature**: 0.3 (for consistent results)
-- **Max Tokens**: 2000
 
 ---
 
@@ -219,64 +204,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue**: `ModuleNotFoundError`
-- **Solution**: Ensure virtual environment is activated and dependencies are installed
-  ```bash
-  .venv\Scripts\activate
-  pip install -r requirement.txt
-  ```
-
-**Issue**: No skills extracted
-- **Solution**: 
-  - Verify GROQ_API_KEY is set correctly
-  - Ensure job descriptions are not empty
-  - Try using demo jobs for testing
-  - Clear cache using sidebar button
-
-**Issue**: PDF conversion fails
-- **Solution**: 
-  - Ensure PDF contains readable text (not scanned images)
-  - Check PDF is not password-protected
-  - Try converting to JSON manually first
-
-**Issue**: Job scraping returns no results
-- **Solution**:
-  - Try different search terms
-  - Change location (try "Remote")
-  - Select different job sources
-  - Check internet connection
-
----
-
-## 📧 Support
-
-For questions or issues, please open an issue on GitHub or contact the development team.
-
----
-
-## 🎯 Roadmap
-
-- [ ] Add support for more job boards
-- [ ] Implement skill trend analysis over time
-- [ ] Add collaborative filtering for syllabus recommendations
-- [ ] Export to multiple formats (Word, Excel, etc.)
-- [ ] Integration with Learning Management Systems (LMS)
-- [ ] Multi-language support
-
----
-
 ## 🙏 Acknowledgments
 
 - Groq for providing fast AI inference
 - JobSpy for reliable job scraping
 - Streamlit for the excellent web framework
 - The open-source community
-
----
-
-**Made with ❤️ by the EduHats Team**
